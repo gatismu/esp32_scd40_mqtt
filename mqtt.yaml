@@ -1,0 +1,24 @@
+sensor:
+
+# confg of my mqtt.yaml
+
+  - name: "Air quality CO2"
+    unique_id: "esp32_co2"
+    state_topic: "homeassistant/sensor/esp32iotsensor/CustomSensor_co2/state"
+    value_template: "{{ value }}"
+    unit_of_measurement: "ppm"
+    device_class: "carbon_dioxide"
+
+  - name: "Temperature Sensor"
+    unique_id: "esp32_temp"
+    state_topic: "homeassistant/sensor/esp32iotsensor/CustomSensor_temp/state"
+    value_template: "{{ value }}"
+    unit_of_measurement: "°C"
+    device_class: "temperature"
+
+  - name: "Humidity Sensor"
+    unique_id: "esp32_rh"
+    state_topic: "homeassistant/sensor/esp32iotsensor/CustomSensor_hum/state"
+    value_template: "{{ value }}"
+    unit_of_measurement: "%"
+    device_class: "humidity"
